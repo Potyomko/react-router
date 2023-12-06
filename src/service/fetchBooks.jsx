@@ -13,7 +13,7 @@ export const fetchBooks = async () => {
 export const fetchBooksById = async ({params}) => {
     console.log(params.bookId);
     try {
-        const data = await axios.get(http://localhost:3004/books/${params.bookId});
+        const data = await axios.get(`http://localhost:3004/books/${params.bookId}`);
         const book = await data.data;
         return book;
     } catch (error) {
